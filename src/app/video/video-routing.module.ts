@@ -5,8 +5,8 @@ import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/comp
 import { UploadComponent } from './upload/upload.component';
 import { ClipComponent } from '../clip/clip.component';
 
-const redirectUnauthorizedToHome = () => redirectUnauthorizedTo('/')
 
+const redirectUnauthorizedToHome = ()=>redirectUnauthorizedTo('')
 const routes: Routes = [
   {
     path: 'manage',
@@ -15,7 +15,7 @@ const routes: Routes = [
       authOnly: true,
       authGuardPipe: redirectUnauthorizedToHome
     },
-    canActivate: [AngularFireAuthGuard]
+    canActivate:[AngularFireAuthGuard]
   },
   {
     path: 'manage-clips',
@@ -27,7 +27,9 @@ const routes: Routes = [
     data:{
       authOnly: true,
       authGuardPipe: redirectUnauthorizedToHome
-    }
+    },
+    canActivate:[AngularFireAuthGuard]
+
   },
   {
     path:'clip/:id',
