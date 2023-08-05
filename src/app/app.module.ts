@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {environment} from 'src/environments/environment'
@@ -33,7 +32,7 @@ import{AngularFireStorageModule} from '@angular/fire/compat/storage';
     AngularFirestoreModule,
     VideoModule,
     AppRoutingModule,
-    AngularFireStorageModule,
+    AngularFireStorageModule
 
   ],
   providers: [],
